@@ -17,6 +17,7 @@ Ce repository contient la reprise d’un projet partiellement initié par une é
 | Versionnage     | Git + GitHub                     |
 | Environnement   | VS Code                          |
 
+
 ### 🎯 Objectifs pédagogiques
 
 ✔️ Traiter des formulaires HTML en PHP
@@ -33,7 +34,7 @@ Ce repository contient la reprise d’un projet partiellement initié par une é
 
 
 ### 🚀 Fonctionnalités — V1
-👤 Joueur
+**👤 Joueur**
 
 Création d’un compte
 
@@ -46,7 +47,7 @@ Consulter son profil (statistiques, inventaire, progression)
 Supprimer son compte
 
 
-🛡️ Administrateur
+**🛡️ Administrateur**
 
 Toutes les fonctionnalités d’un joueur
 
