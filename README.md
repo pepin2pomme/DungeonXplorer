@@ -38,7 +38,8 @@ cahier des charges et contraintes techniques
 
 ✔️ Conception ou utilisation d’un mini-framework PHP
 
-###🚀 Fonctionnalités – Version 1
+### 🚀 Fonctionnalités – Version 1
+
 **👤 Côté Joueur**
 
 Création d’un compte
