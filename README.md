@@ -1,8 +1,8 @@
-DungeonXplorer
+## DungeonXplorer
 
 Une aventure dark fantasy inspirée des livres dont vous êtes le héros
 
-🎲 Présentation
+### 🎲 Présentation
 
 DungeonXplorer est une application Web interactive permettant aux joueurs d’incarner un personnage et de progresser dans une aventure au format “livre dont vous êtes le héros”.
 Le projet est développé pour l’association Les Aventuriers du Val Perdu, désireuse de moderniser ce format emblématique des années 80–90.
@@ -17,7 +17,7 @@ Ce repository contient la reprise d’un projet partiellement initié par une é
 | Versionnage     | Git + GitHub                     |
 | Environnement   | VS Code                          |
 
-🎯 Objectifs pédagogiques
+### 🎯 Objectifs pédagogiques
 
 ✔️ Traiter des formulaires HTML en PHP
 
