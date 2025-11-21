@@ -1,59 +1,63 @@
-## DungeonXplorer
-
-Une aventure dark fantasy inspirée des livres dont vous êtes le héros
+# 🌑 DungeonXplorer
+## _Une aventure dark fantasy inspirée des livres dont vous êtes le héros_
 
 ### 🎲 Présentation
 
-DungeonXplorer est une application Web interactive permettant aux joueurs d’incarner un personnage et de progresser dans une aventure au format “livre dont vous êtes le héros”.
-Le projet est développé pour l’association Les Aventuriers du Val Perdu, désireuse de moderniser ce format emblématique des années 80–90.
+**DungeonXplorer** est une application Web interactive qui plonge le joueur dans une aventure façon livres dont vous êtes le héros.
+Le projet est développé pour l’association _**"Les Aventuriers du Val Perdu**_, dans l’objectif de remettre au goût du jour ce format culte des années 80–90.
 
-Ce repository contient la reprise d’un projet partiellement initié par une équipe précédente, incluant contenus textuels, éléments graphiques et un début de base de données. 
+Ce dépôt est la reprise d’un projet entamé par une équipe précédente, incluant :
 
-| Domaine         | Technologie                      |
-| --------------- | -------------------------------- |
-| Backend         | PHP (MVC), PDO                   |
-| Frontend        | HTML, CSS, JavaScript, Bootstrap |
-| Base de données | MySQL                            |
-| Versionnage     | Git + GitHub                     |
-| Environnement   | VS Code                          |
+contenus textuels
 
+éléments graphiques
+
+début de base de données
+
+cahier des charges et contraintes techniques
+
+| Domaine             | Technologie                      |
+| ------------------- | -------------------------------- |
+| **Backend**         | PHP (MVC), PDO                   |
+| **Frontend**        | HTML, CSS, JavaScript, Bootstrap |
+| **Base de données** | MySQL                            |
+| **Versionnage**     | Git + GitHub                     |
+| **Environnement**   | VS Code                          |
 
 ### 🎯 Objectifs pédagogiques
 
-✔️ Traiter des formulaires HTML en PHP
+✔️ Traitement de formulaires HTML en PHP
 
-✔️ Concevoir une base de données SQL
+✔️ Conception d’une base de données SQL
 
-✔️ Réaliser un CRUD complet
+✔️ Réalisation d’un CRUD complet
 
-✔️ Utiliser PDO
+✔️ Utilisation de PDO
 
-✔️ Implémenter un design pattern MVC
+✔️ Implémentation du design pattern MVC
 
-✔️ Concevoir ou réutiliser un mini framework PHP
+✔️ Conception ou utilisation d’un mini-framework PHP
 
-
-### 🚀 Fonctionnalités — V1
-**👤 Joueur**
+###🚀 Fonctionnalités – Version 1
+**👤 Côté Joueur**
 
 Création d’un compte
 
 Création d’un personnage (Guerrier / Voleur / Magicien)
 
-Commencer ou reprendre l’aventure
+Début ou reprise de l’aventure
 
-Consulter son profil (statistiques, inventaire, progression)
+Consultation du profil (statistiques, inventaire, progression)
 
-Supprimer son compte
+Suppression du compte
 
-
-**🛡️ Administrateur**
+**🛡️ Côté Administrateur**
 
 Toutes les fonctionnalités d’un joueur
 
 Gestion des comptes utilisateurs
 
-CRUD complet sur les contenus :
+Gestion complète du contenu (CRUD) :
 
 Chapitres
 
@@ -63,24 +67,28 @@ Trésors
 
 Images
 
+### 🔮 Fonctionnalités envisagées – Version 2
 
-### 🔮 Fonctionnalités futures — V2
+Le client souhaite ajouter :
 
-Le client souhaite inclure :
+➕ Nouvelles aventures
 
-Ajout de nouvelles aventures
+➕ Nouvelles classes de personnages
 
-Nouvelles classes de personnages
+📊 Statistiques avancées sur les joueurs
 
-Statistiques concernant les joueurs
+⚔️ Système de combat plus visuel
 
-Un système de combat plus visuel
-
-Considerations RGPD (suppression de comptes, données personnelles)
-
+⚖️ Prise en compte du RGPD (données & suppression de compte)
 
 ### 👥 Équipe
 
-Projet réalisé en groupe de 5–6 étudiants dans un cadre pédagogique, celui ci a été réalisé par MONTALS Lylian, KAHLOUCHE Mohamed, GOLLIOT Camille, ESNAULT Clement et SOREL Milo.
+Ce projet a été réalisé dans le cadre d’un travail de groupe réunissant :
 
-Dépôt GitHub public, collaboration en équipe et bonne gestion des versions attendues.
+**MONTALS Lylian
+KAHLOUCHE Mohamed
+GOLLIOT Camille
+ESNAULT Clément
+SOREL Milo**
+
+Travail collaboratif sur GitHub, avec une gestion de versions structurée et une organisation en équipe.
