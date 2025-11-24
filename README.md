@@ -8,13 +8,13 @@ Le projet est développé pour l’association _**"Les Aventuriers du Val Perdu*
 
 Ce dépôt est la reprise d’un projet entamé par une équipe précédente, incluant :
 
-contenus textuels
+* contenus textuels
 
-éléments graphiques
+* éléments graphiques
 
-début de base de données
+* début de base de données
 
-cahier des charges et contraintes techniques
+* cahier des charges et contraintes techniques
 
 | Domaine             | Technologie                      |
 | ------------------- | -------------------------------- |
@@ -60,13 +60,13 @@ Gestion des comptes utilisateurs
 
 Gestion complète du contenu (CRUD) :
 
-Chapitres
+* Chapitres
 
-Monstres
+* Monstres
 
-Trésors
+* Trésors
 
-Images
+* Images
 
 ### 🔮 Fonctionnalités envisagées – Version 2
 
