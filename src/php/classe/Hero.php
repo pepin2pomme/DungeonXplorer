@@ -13,7 +13,7 @@ class Hero
     public int $strength;
     public int $initiative;
 
-    public int $class_id;
+
 
     public ?int $armor_item_id;
     public ?int $primary_weapon_item_id;
@@ -37,7 +37,7 @@ class Hero
         $this->strength                 = (int)($data['strength'] ?? 0);
         $this->initiative               = (int)($data['initiative'] ?? 0);
 
-        $this->class_id                 = $data['class_id'];
+        
 
         $this->armor_item_id            = $data['armor_item_id'] ?? null;
         $this->primary_weapon_item_id   = $data['primary_weapon_item_id'] ?? null;
