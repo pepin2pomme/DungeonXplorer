@@ -7,12 +7,7 @@
     <link rel="stylesheet" href="src/css/styles.css">
 </head>
 <body>
-
-    <div>
-        <p>menubar en dessous</p>
-        <?php include __DIR__ . '/src/php/header.php'; ?>
-
-    </div>
+    <?php include('src/php/header.php'); ?>
 
     <main>
         <section id="home">
