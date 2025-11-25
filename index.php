@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="src/css/styles.css">
 </head>
 <body>
-
+     <?php include 'pages/navbar.php';?>
     <header>
         <h1>Welcome to My livre dont vous etres le hero</h1>
         <nav>
