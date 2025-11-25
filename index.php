@@ -10,11 +10,8 @@
 
     <div>
         <p>menubar en dessous</p>
-        <?php
-        if (!include('src/php/comp/header.php')) {
-            echo "<p style='color:red;'>ERREUR : FICHIER header.php INTROUVABLE</p>";
-        }
-        ?>
+        <?php include __DIR__ . '/src/php/header.php'; ?>
+
     </div>
 
     <main>
