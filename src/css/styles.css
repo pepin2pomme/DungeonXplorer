@@ -1,3 +1,150 @@
-header{
-    background-color: aquamarine;
+.flex-row{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content:space-between;
 }
+
+.flex-col{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+/*==================== HEADER ====================*/
+
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgb(20, 20, 20);
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    z-index: 1000;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 15px;
+    margin: 0;
+    padding: 0;
+}
+
+header nav ul li a {
+    color: whitesmoke;
+    text-decoration: none;
+    background: #3a3a3a;
+    padding: 8px 14px;
+    border-radius: 6px;
+    font-size: 15px;
+    font-weight: 500;
+    display: inline-block;
+    transition: 0.2s;
+}
+
+header nav ul li a:hover {
+    background: #5a5a5a;
+}
+
+header nav p {
+    margin: 0;
+    color: whitesmoke;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+@media (max-width: 768px) {
+    header nav ul li a[href="index.php"]::before {
+        content: "🏠";
+    }
+    header nav ul li a[href="decouvrir.php"]::before {
+        content: "🔍";
+    }
+    header nav ul li a[href="apropos.php"]::before {
+        content: "ℹ️";
+    }
+    header nav ul li a[href="login.php"]::before {
+        content: "🔑";
+    }
+
+    header nav ul li a {
+        font-size: 0;
+        padding: 10px;
+    }
+
+    header nav ul li a::before {
+        font-size: 22px;
+    }
+
+    header nav p::before {
+        content: "👤";
+        font-size: 22px;
+    }
+
+    header nav p {
+        font-size: 0;
+    }
+}
+
+
+/*==================== body ====================*/
+
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    overflow-x: hidden;
+    color: whitesmoke;
+    position: relative;
+    padding-top: 60px; /* espace pour ne pas passer sous le header */
+
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: -20px;        /* déborde autour */
+    left: -20px;
+    width: calc(100vw + 40px);
+    height: calc(100vh + 40px);
+
+    background-image: url('../../assets/background/wp2.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    filter: blur(6px);
+    z-index: -2;
+    pointer-events: none;
+}
+
+body::after {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+
+    background: rgba(26, 26, 26, 0.55);
+    z-index: -1;
+    pointer-events: none;
+}
+
+@media (max-width: 768px) {
+    body::before {
+        background-image: url('../../assets/background/wp2.jpg');
+    }
+}
+
+
+/*==================== BODY ====================*/
