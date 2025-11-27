@@ -2,7 +2,6 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content:space-between;
 }
 
 .flex-col{
@@ -11,6 +10,8 @@
   align-items: center;
 }
 
+header div{
+}
 
 /*==================== HEADER ====================*/
 
@@ -22,76 +23,111 @@ header {
     width: 100%;
     background-color: rgb(20, 20, 20);
     padding: 10px 20px;
-    display: flex;
-    align-items: center;
     box-sizing: border-box;
     z-index: 1000;
-}
 
-header nav ul {
-    list-style: none;
     display: flex;
-    flex-direction: row;
     align-items: center;
-    gap: 15px;
-    margin: 0;
-    padding: 0;
+    justify-content: space-between;
 }
 
-header nav ul li a {
+.button{
     color: whitesmoke;
     text-decoration: none;
-    background: #3a3a3a;
-    padding: 8px 14px;
-    border-radius: 6px;
     font-size: 15px;
     font-weight: 500;
     display: inline-block;
     transition: 0.2s;
+    margin: 10px;
 }
 
-header nav ul li a:hover {
-    background: #5a5a5a;
+.navButton {
+    border: solid 2px #3a3a3a;
+    padding: 8px 14px;
+    border-radius: 6px;
 }
 
-header nav p {
-    margin: 0;
-    color: whitesmoke;
-    font-size: 15px;
-    font-weight: bold;
-}
+.navButton:hover {
+    background: #3a3a3a;
+} 
 
-@media (max-width: 768px) {
-    header nav ul li a[href="index.php"]::before {
-        content: "🏠";
+@media (max-width: 800px) {
+    #logoImg{
+        max-width:70px;
     }
-    header nav ul li a[href="decouvrir.php"]::before {
-        content: "🔍";
-    }
-    header nav ul li a[href="apropos.php"]::before {
-        content: "ℹ️";
-    }
-    header nav ul li a[href="login.php"]::before {
-        content: "🔑";
+    
+    .navButton[href="index.php"]::before {
+        content: "";
+        display: block;
+        width: 20px;
+        height: 20px;
+        background-image: url('/sites/DungeonXplorer/assets/icons/home.png');
+        background-size: contain;
+        background-repeat: no-repeat;
     }
 
-    header nav ul li a {
+    .navButton[href="decouvrir.php"]::before {
+        content: "";
+        display: block;
+        width: 20px;
+        height: 20px;
+        background-image: url('/sites/DungeonXplorer/assets/icons/compass.png');
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+
+    .navButton[href="apropos.php"]::before {
+        content: "";
+        display: block;
+        width: 20px;
+        height: 20px;
+        background-image: url('/sites/DungeonXplorer/assets/icons/info.png');
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+
+    .button[href="login.php"]::before {
+        content: "";
+        display: block;
+        width: 20px;
+        height: 20px;
+        background-image: url('/sites/DungeonXplorer/assets/icons/account.png');
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+
+
+    .button{
+        color: whitesmoke;
+        text-decoration: none;
         font-size: 0;
-        padding: 10px;
+        display: inline-block;
+        transition: 0.2s;
+
+        margin: 5px;
     }
 
-    header nav ul li a::before {
-        font-size: 22px;
-    }
-
-    header nav p::before {
-        content: "👤";
-        font-size: 22px;
-    }
-
-    header nav p {
+    .navButton {
+        border-radius: 6px;
         font-size: 0;
+        padding: 6px 8px;
     }
+
+    .navButton::before {
+        font-size: 20px;
+        display: block;
+    }
+
+    header {
+        padding: 5px;
+    }
+
+    header img {
+        top: 0;
+        margin: 0;
+        height: 30px;
+    }
+
 }
 
 
