@@ -10,9 +10,6 @@
   align-items: center;
 }
 
-header div{
-}
-
 /*==================== HEADER ====================*/
 
 
@@ -34,88 +31,45 @@ header {
 .button{
     color: whitesmoke;
     text-decoration: none;
-    font-size: 15px;
+    font-size: 20px;
     font-weight: 500;
-    display: inline-block;
-    transition: 0.2s;
-    margin: 10px;
-}
-
-.navButton {
-    border: solid 2px #3a3a3a;
-    padding: 8px 14px;
+    margin: 10px 15px;
+    
+    padding: 0;
     border-radius: 6px;
 }
 
-.navButton:hover {
+.button img{
+    max-height: 25px;
+    margin-right: 5px;
+}
+
+.button *{
+    margin: 3px 5px;
+}
+
+
+.button:hover {
     background: #3a3a3a;
+    transition:  0.5s;
 } 
 
 @media (max-width: 800px) {
-    #logoImg{
-        max-width:70px;
+    a img{
+        max-height:30px;
     }
     
-    .navButton[href="index.php"]::before {
-        content: "";
-        display: block;
-        width: 20px;
-        height: 20px;
-        background-image: url('/sites/DungeonXplorer/assets/icons/home.png');
-        background-size: contain;
-        background-repeat: no-repeat;
-    }
-
-    .navButton[href="decouvrir.php"]::before {
-        content: "";
-        display: block;
-        width: 20px;
-        height: 20px;
-        background-image: url('/sites/DungeonXplorer/assets/icons/compass.png');
-        background-size: contain;
-        background-repeat: no-repeat;
-    }
-
-    .navButton[href="apropos.php"]::before {
-        content: "";
-        display: block;
-        width: 20px;
-        height: 20px;
-        background-image: url('/sites/DungeonXplorer/assets/icons/info.png');
-        background-repeat: no-repeat;
-        background-size: contain;
-    }
-
-    .button[href="login.php"]::before {
-        content: "";
-        display: block;
-        width: 20px;
-        height: 20px;
-        background-image: url('/sites/DungeonXplorer/assets/icons/account.png');
-        background-repeat: no-repeat;
-        background-size: contain;
-    }
-
-
     .button{
         color: whitesmoke;
         text-decoration: none;
         font-size: 0;
         display: inline-block;
         transition: 0.2s;
-
-        margin: 5px;
-    }
-
-    .navButton {
-        border-radius: 6px;
-        font-size: 0;
-        padding: 6px 8px;
-    }
-
-    .navButton::before {
-        font-size: 20px;
         display: block;
+
+        border-radius: 6px;
+        margin: 5px;
+        padding: 0;
     }
 
     header {
