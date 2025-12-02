@@ -1,4 +1,8 @@
 <?php
+session_start();
+
+include_once 'php/config.php';
+
 class CombatController {
 
     public function start() {
@@ -31,5 +35,25 @@ class CombatController {
             "finished" => $combat->isFinished()
         ]);
     }
+
+
+    public function startBrutTest() {
+        $db = DB::get();
+
+        $hero = EntityDAO::getById(1, $db);   //Chad
+        $monster = EntityDAO::getById(5, $db); // Gobelin
+
+        $_SESSION['combat'] = new Combat($hero, $monster);
+
+        // Optionnel : log initial
+        $_SESSION['log'] = "Combat initié en brut !";
+
+        // Appeler la vue pour afficher
+        $view = new CombatView($_SESSION['combat']);
+        $view->render();
+    }
+
+
+
 }
 ?>
