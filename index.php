@@ -7,7 +7,10 @@
     <link rel="stylesheet" href="src/css/styles.css">
 </head>
 <body>
-    <?php include('pages/header.php'); ?>
+
+        <?php include('pages/header.php'); ?>
+        <?php include 'pages/navbar.php';?>
+
 
     <main>
         <section id="home">
