@@ -33,7 +33,7 @@
             <?php else: ?>
                 <a class="button flex-row" href="<?= $root ?>/pages/profil.php">
                     <img src="<?= $root ?>/assets/icons/account.png" alt="Logo" style="height:34px; width:auto;">
-                    <?= htmlspecialchars($_SESSION['user']); ?>
+                    <?= htmlspecialchars($_SESSION['pseudo']); ?>
                 </a>
             <?php endif; ?>
         </div>
