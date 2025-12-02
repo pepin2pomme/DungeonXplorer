@@ -10,8 +10,6 @@ if (empty($com_pseudo) || empty($com_email) || empty($com_mdp) ) {
     exit();
 }
 
-//$cli_mdp_hache = password_hash($cli_mdp, PASSWORD_DEFAULT);
-
 try{
     $stmtCheck = $db->prepare("SELECT COUNT(*) FROM DUN_COMPTE WHERE COM_EMAIL = :email");
     $stmtCheck->execute([':email' => $com_email]);
@@ -32,7 +30,7 @@ try{
     $_SESSION['pseudo'] = $com_pseudo;
     $_SESSION['email'] = $com_email;
 
-    header('Location: ../index.php');
+    header('Location: ../../index.php');
     exit();
 }catch (PDOException $e) {
         die("Erreur de connexion : " . $e->getMessage());
