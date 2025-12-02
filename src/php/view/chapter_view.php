@@ -8,7 +8,7 @@
 </head>
 <body>
     <h1><?php echo $chapter->getTitle(); ?></h1>
-    <img src="<?php echo $chapter->getImage(); ?>" alt="Image de chapitre" style="max-width: 100%; height: auto;">
+    <img src="images/<?php echo $chapter->getImage(); ?>" alt="Image du chapitre" style="max-width: 100%; height: auto;">
     <p><?php echo $chapter->getDescription(); ?></p>
 
     <h2>Choisissez votre chemin:</h2>
