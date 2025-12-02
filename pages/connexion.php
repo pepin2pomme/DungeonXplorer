@@ -10,7 +10,7 @@ try
 {
 
 	//echo 'test ctach';
-    $db = new PDO('mysql:host=localhost;dbname=test;charset=utf8', 'dx08', 'ohtataLib2iophee'); // insérez vos paramètres de connexion à la BDD.
+    $db = new PDO('mysql:host=localhost;dbname=dx08_bd;charset=utf8', 'dx08', 'ohtataLib2iophee'); // insérez vos paramètres de connexion à la BDD.
 	//Remplace la base de connexion
 	//echo 'test ctach';
 
