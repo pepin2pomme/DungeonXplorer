@@ -10,12 +10,12 @@ error_reporting(E_ALL);
 require_once __DIR__ . '/config.php';
 require_once __DIR__ . '/Controller/CombatController.php';
 require_once __DIR__ . '/models/Entity.php';
-require_once __DIR__ . '/models/Combat.php';
-require_once __DIR__ . '/dao/EntityDAO.php';
+require_once __DIR__ . '/models/combat.php';
+require_once __DIR__ . '/models/EntityDAO.php';
 require_once __DIR__ . '/View/CombatView.php';
 
 // Router
-$controller = new CombatController();
+$controller = new CombatController($db);
 
 $action = $_GET['action'] ?? 'none';
 

@@ -1,9 +1,14 @@
 <?php
-session_start();
 
 include_once __DIR__ . '/../config.php';  
 
 class CombatController {
+
+    private $db;
+
+     public function __construct($db) { 
+        $this->db = $db; 
+    }
 
     public function start() {
        $hero = EntityDAO::getById($_GET["hero"], DB::get());
@@ -28,20 +33,15 @@ class CombatController {
             }
         }
 
-        echo json_encode([
-            "heroPV" => $combat->hero->pv,
-            "monsterPV" => $combat->monster->pv,
-            "log" => $log,
-            "finished" => $combat->isFinished()
-        ]);
+     
     }
 
 
     public function startBrutTest() {
-       $db = DB::get();
+      
 
-        $hero = EntityDAO::getById(1, $db);
-        $monster = EntityDAO::getById(5, $db);
+        $hero = EntityDAO::getById(2, $this->db);
+        $monster = EntityDAO::getById(1, $this->db);
 
         $_SESSION['combat'] = new Combat($hero, $monster);
         $_SESSION['log'] = "Combat initié en brut !";

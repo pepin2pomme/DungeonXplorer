@@ -41,7 +41,7 @@
             <p>Get in touch with us here.</p>
         </section>
 
-        <form action="src/php/Controller/CombatController.php" method="get">
+        <form action="src/php/combatRouteur.php" method="get">
             <input type="hidden" name="action" value="startBrutTest">
             <button type="submit">Lancer un combat brut</button>
         </form>
