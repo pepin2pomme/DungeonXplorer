@@ -1,57 +1,39 @@
 <?php
+include "connexion.php";
 
-include "connection.php";
+$com_pseudo =isset($_POST['pseudo']) ? trim($_POST['pseudo']) : '';
+$com_email  =isset($_POST['email']) ? trim($_POST['email']) : '';
+$com_mdp    =isset($_POST['password']) ? trim($_POST['password']) : '';
 
+if (empty($com_pseudo) || empty($com_email) || empty($com_mdp) ) {
+    echo "<script>alert('Veuillez remplir tous les champs obligatoires.'); window.history.back();</script>";
+    exit();
+}
 
-
-
-$pers_pseudo = $_POST["pseudo"];
-$pers_email = $_POST["email"];
-$pers_mdp = $_POST['mdp'];
-
-
-echo $pseudo ,' ', $cli_email,' ', $cli_mdp, ' ',
-
-$sql = "Insert into /*TODO*/ values (null,:psuedo, :email, :mdp)";
-
-$sql2 = "SELECT COUNT(*) FROM rap_client WHERE cli_courriel = :email";
-
-
-
+//$cli_mdp_hache = password_hash($cli_mdp, PASSWORD_DEFAULT);
 
 try{
-    $conn = OuvrirConnexionPDO($db,$db_username,$db_password);
+    $stmtCheck = $db->prepare("SELECT COUNT(*) FROM DUN_COMPTE WHERE COM_EMAIL = :email");
+    $stmtCheck->execute([':email' => $com_email]);
+    if ($stmtCheck->fetchColumn() > 0) {
+        echo "<script>alert('Cette adresse e-mail est déjà utilisée.'); window.history.back();</script>";
+        exit();
+    }
 
-    $stmt2 = $conn->prepare($sql2);
-    $stmt2->bindParam(':email', $cli_email);
-    $stmt2->execute();
 
-    $count = $stmt2->fetchColumn();
-    if ($count > 0) {
-        echo "<script>alert('Un email est déjà utilisé pour ce compte.'); window.history.back();</script>";
-    } else {
+    $stmt = $db->prepare("INSERT INTO DUN_COMPTE (COM_ID,COM_PSEUDO, COM_EMAIL, COM_MDP) VALUES (7,:pseudo, :email, :password)");
+    $stmt->execute([
+        ':pseudo' => $com_pseudo,
+        ':email' => $com_email,
+        ':password' => $com_mdp
+    ]);
 
-    $stmt = $conn->prepare($sql);
-    
-    $stmt->bindParam(':pseudo', $cli_prenom);
-    $stmt->bindParam(':email', $cli_email);
-    $stmt->bindParam(':mdp', $cli_mdp);
+    $_SESSION['user_id'] = $db->lastInsertId();
+    $_SESSION['pseudo'] = $com_pseudo;
+    $_SESSION['email'] = $com_email;
 
-    $stmt->execute();
-    echo "<script>alert('Inscription réussie !');
-    window.location.href = 'index.php';</script>";
-
+    header('Location: ../index.php');
     exit();
-    }
-
-    
-
-    }catch(PDOException $e){
-        echo "<br>Erreur PDO : " . $e->getMessage();
-
-    }
-
-
-
-
-
+}catch (PDOException $e) {
+        die("Erreur de connexion : " . $e->getMessage());
+}

@@ -2,8 +2,26 @@
 
 $db_username = "dx08";
 $db_password = "ohtataLib2iophee";
-$db = fabriquerChaineConnexPDO();
+$host = 'localhost';
+//echo 'test premier';
 
+//$db = fabriquerChaineConnexPDO();
+try
+{
+
+	//echo 'test ctach';
+    $db = new PDO('mysql:host=localhost;dbname=test;charset=utf8', 'dx08', 'ohtataLib2iophee'); // insérez vos paramètres de connexion à la BDD.
+	//Remplace la base de connexion
+	//echo 'test ctach';
+
+}
+
+// Gestion des erreurs
+catch(Exception $e)
+{
+        die('Erreur : '.$e->getMessage());
+}
+/*
 
 //---------------------------------------------------------------------------------------------
 function OuvrirConnexionPDO($db,$db_username,$db_password)
@@ -20,6 +38,7 @@ function OuvrirConnexionPDO($db,$db_username,$db_password)
 	return $conn;
 }
 //---------------------------------------------------------------------------------------------
+*/
 function majDonneesPDO($conn,$sql) // requêtes insert, update, delete non préparées
 {
 	$stmt = $conn->exec($sql);
@@ -97,9 +116,9 @@ function fabriquerChaineConnexPDO()
 {
 	//$hote = '10.103.0.20';
 	//$hote = '127.0.0.1';
-	$hote = 'harpagon.unicaen.fr';
-	$port = '1521'; // port par défaut
-	$service = 'info';
+	$hote = 'localhost';
+	$port = '3306'; // port par défaut
+	$service = 'test';
 	//$service = 'XE';
 
 	$db =

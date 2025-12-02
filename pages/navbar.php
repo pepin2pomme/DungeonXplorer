@@ -15,7 +15,7 @@
         } else{
             $text = "S'inscrire";
             echo '<li id="inscription"><a href="pages/Inscription.php">'.$text.'</a></li>
-            <li id="connexion"><a href="pages/connexion.php">Se Connecter</a></li>';
+            <li id="connexion"><a href="pages/seConnecter.php">Se Connecter</a></li>';
         }
         ?>
     </div>
