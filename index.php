@@ -42,6 +42,20 @@
         </section>
     </main>
 
+    <?php
+
+        require_once 'src/php/controllers/ChapterController.php';
+        
+        $chapterController = new ChapterController();
+        
+        // Récupérer l'ID du chapitre depuis l'URL, par défaut le chapitre 1
+        $chapterId = isset($_GET['chapter']) ? (int)$_GET['chapter'] : 1;
+        
+        // Afficher le chapitre avec l'ID donné
+        $chapterController->show($chapterId);
+    ?>
+
+
     <footer>
         <p>&copy; 2025 My Website. All rights reserved.</p>
     </footer>

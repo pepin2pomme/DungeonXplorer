@@ -1,8 +1,4 @@
-<?php
-// view/chapter.php
-
-$chapter = $chapterController->getChapter($chapterId);
-?>
+<!-- view/chapter.php -->
 
 <!DOCTYPE html>
 <html lang="fr">
