@@ -1,13 +1,23 @@
 <?php
-    $host = "localhost";
-    $db   = "dx08_bd";
-    $user = "dx08";
-    $pass = "ohtataLib2iophee";
 
-    try {
-    $pdo = new PDO("mysql:host=$host;dbname=$db;charset=utf8mb4", $user, $pass);
-    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    } catch (PDOException $e) {
-        die("Erreur de connexion : " . $e->getMessage());
-    }
-?>
+$db_username = "dx08";
+$db_password = "ohtataLib2iophee";
+$host = 'localhost';
+//echo 'test premier';
+
+//$db = fabriquerChaineConnexPDO();
+try
+{
+
+	//echo 'test ctach';
+    $db = new PDO('mysql:host=localhost;dbname=dx08_bd;charset=utf8', 'dx08', 'ohtataLib2iophee'); // insérez vos paramètres de connexion à la BDD.
+	//Remplace la base de connexion
+	//echo 'test ctach';
+
+}
+
+// Gestion des erreurs
+catch(Exception $e)
+{
+ die('Erreur : '.$e->getMessage());
+}  
