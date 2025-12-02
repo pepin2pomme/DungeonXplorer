@@ -94,7 +94,7 @@ body {
     overflow-x: hidden;
     color: whitesmoke;
     position: relative;
-    padding-top: 60px; /* espace pour ne pas passer sous le header */
+    padding-top: 60px;
 
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
@@ -107,7 +107,7 @@ body::before {
     width: calc(100vw + 40px);
     height: calc(100vh + 40px);
 
-    background-image: url('../../assets/background/wp2.jpg');
+    background-image: url('../../assets/background/wp1.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
