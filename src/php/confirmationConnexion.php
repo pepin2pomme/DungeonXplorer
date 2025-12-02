@@ -21,8 +21,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $_SESSION['user_id'] = $user['COM_ID'];
             $_SESSION['email'] = $user['COM_EMAIL'];
             $_SESSION['pseudo'] = $user['COM_PSEUDO'];
-            //echo "Connexion réussit";
-            header('Location: ../index.php');
+            header('Location: ../../index.php');
             exit();
         } else {
             echo "Mot de passe incorrect.";

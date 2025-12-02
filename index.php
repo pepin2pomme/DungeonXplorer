@@ -9,7 +9,6 @@
 <body>
 
         <?php include('pages/header.php'); ?>
-        <?php include 'pages/navbar.php';?>
 
 
     <main>
