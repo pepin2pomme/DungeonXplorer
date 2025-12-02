@@ -7,9 +7,9 @@
     <link rel="stylesheet" href="src/css/styles.css">
 </head>
 <body>
-
+    <header>
         <?php include('pages/header.php'); ?>
-
+    </header>
 
     <main>
         <section id="home">

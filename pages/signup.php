@@ -1,7 +1,7 @@
 <?php
     $message = $_SESSION['message'] ?? '';
     unset($_SESSION['message']); 
-    $root = '/sites/DungeonXplorer';
+    $root = '/DungeonXplorer';
 ?>
 <!DOCTYPE html>
 <html lang="fr">

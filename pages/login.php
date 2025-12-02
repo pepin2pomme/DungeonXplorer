@@ -1,5 +1,5 @@
 <?php
-    $root = '/sites/DungeonXplorer';
+    $root = '/DungeonXplorer';
 ?>
 
 <!DOCTYPE html>
