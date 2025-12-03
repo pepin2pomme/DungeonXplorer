@@ -1,40 +1,45 @@
-<?php
-    session_start();
-    $root = '/DungeonXplorer';
-?>
-
-<header>
-        <div class="flex-row">         
-            <a id="logoImg" href="<?= $root ?>">
-                <picture>
-                    <source media="(max-width: 768px)" srcset="<?= $root ?>/assets/logo/dungeonLogoMinLight.png">
-                    <img src="<?= $root ?>/assets/logo/dungeonLogoFullLight.png" alt="Logo" style="height:34px; width:auto;">
-                </picture>            
-            </a>
-            <a class="button flex-row" href="<?= $root ?>">
-                <img src="<?= $root ?>/assets/icons/home.png" alt="Logo" style="height:34px; width:auto;">
-                <p>Accueil</p>
-            </a>
-            <a class="button flex-row" href="<?= $root ?>/pages/decouvrir.php">
-                <img src="<?= $root ?>/assets/icons/compass.png" alt="Logo" style="height:34px; width:auto;">
-                <p>Decouvrir</p>
-            </a>
-        </div>
-        <div class="flex-row">
-            <a class="button flex-row" href="<?= $root ?>/pages/apropos.php">
-                <img src="<?= $root ?>/assets/icons/info.png" alt="Logo" style="height:34px; width:auto;">
-                <p>A propos</p>
-            </a>
-            <?php if(!isset($_SESSION['is_logged_in'])): ?>
-                <a class="button flex-row" href="<?= $root ?>/pages/login.php">
-                    <img src="<?= $root ?>/assets/icons/account.png" alt="Logo" style="height:34px; width:auto;">
-                    <p>Se connecter</p>
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DungeonXplorer</title>
+    <link rel="stylesheet" href="public/css/styles.css">
+</head>
+<body>
+    <header>
+            <div class="flex-row">         
+                <a id="logoImg" href="home">
+                    <picture>
+                        <source media="(max-width: 768px)" srcset="/public/img/logo/dungeonLogoMinLight.png">
+                        <img src="public/img/logo/dungeonLogoFullLight.png" alt="Logo" style="height:34px; width:auto;">
+                    </picture>            
                 </a>
-            <?php else: ?>
-                <a class="button flex-row" href="<?= $root ?>/pages/profil.php">
-                    <img src="<?= $root ?>/assets/icons/account.png" alt="Logo" style="height:34px; width:auto;">
-                    <?= htmlspecialchars($_SESSION['pseudo']); ?>
+                <a class="button flex-row" href="home">
+                    <img src="public/img/icons/home.png" alt="Logo" style="height:34px; width:auto;">
+                    <p>Accueil</p>
                 </a>
-            <?php endif; ?>
-        </div>
-</header>
+                <a class="button flex-row" href="decouvrir">
+                    <img src="public/img/icons/compass.png" alt="Logo" style="height:34px; width:auto;">
+                    <p>Decouvrir</p>
+                </a>
+            </div>
+            <div class="flex-row">
+                <a class="button flex-row" href="about">
+                    <img src="public/img/icons/info.png" alt="Logo" style="height:34px; width:auto;">
+                    <p>A propos</p>
+                </a>
+                <?php if(!isset($_SESSION['is_logged_in'])): ?>
+                    <a class="button flex-row" href="login">
+                        <img src="public/img/icons/account.png" alt="Logo" style="height:34px; width:auto;">
+                        <p>Se connecter</p>
+                    </a>
+                <?php else: ?>
+                    <a class="button flex-row" href="profil">
+                        <img src="public/img/icons/account.png" alt="Logo" style="height:34px; width:auto;">
+                        <?= htmlspecialchars($_SESSION['pseudo']); ?>
+                    </a>
+                <?php endif; ?>
+            </div>
+    </header>
+    <main>

@@ -107,7 +107,7 @@ body::before {
     width: calc(100vw + 40px);
     height: calc(100vh + 40px);
 
-    background-image: url('../../assets/background/wp1.jpg');
+    background-image: url('../img/background/wp2.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -132,7 +132,7 @@ body::after {
 
 @media (max-width: 768px) {
     body::before {
-        background-image: url('../../assets/background/wp2.jpg');
+        background-image: url('../img/background/wp2.jpg');
     }
 }
 

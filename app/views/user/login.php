@@ -14,7 +14,9 @@
 
 <body class="compte">
 
-    <?php include('header.php'); ?>
+    <header>
+        <?php include(ROOT_DIR . 'app/views/includes/header.php'); ?>
+    </header>   
    
     <main>
         <div class="container">
