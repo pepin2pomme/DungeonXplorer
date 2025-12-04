@@ -1,6 +1,4 @@
 <?php
-session_start();
-include_once 'connexion.php';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
@@ -20,9 +18,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         if ($email === $user['COM_EMAIL'] && $password === $user['COM_MDP']) {
             $_SESSION['user_id'] = $user['COM_ID'];
             $_SESSION['email'] = $user['COM_EMAIL'];
-            $_SESSION['pseudo'] = $user['COM_PSEUDO'];
-            header('Location: ../../index.php');
-            exit();
+            $_SESSION['pseudo'] = $user['COM_PSEUDO'];      
+            header('Location: home');
+            exit;
         } else {
             echo "Mot de passe incorrect.";
         }

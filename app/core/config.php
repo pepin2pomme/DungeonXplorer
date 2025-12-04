@@ -1,13 +1,12 @@
 <?php
-    $host = "localhost";
-    $db = "dx08_bd";
-    $user = "dx08";
-    $pass = "ohtataLib2iophee";
-
+    $host = 'localhost';
+    $db_username = "root";
+    $db_password = "";
+    $dbname = "bdddxp";
     try {
-        $pdo = new PDO("mysql:host=$host;dbname=$db;charset=utf8mb4", $user, $pass);
-        $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+        $db = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8", $db_username, $db_password);
+        echo "Connexion réussie !";
     } catch (PDOException $e) {
-        die("Erreur de connexion : " . $e->getMessage());
+        die("Erreur : " . $e->getMessage());
     }
 ?>

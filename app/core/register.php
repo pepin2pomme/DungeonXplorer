@@ -1,5 +1,4 @@
 <?php
-include "connexion.php";
 
 $com_pseudo =isset($_POST['pseudo']) ? trim($_POST['pseudo']) : '';
 $com_email  =isset($_POST['email']) ? trim($_POST['email']) : '';
@@ -29,9 +28,9 @@ try{
     $_SESSION['user_id'] = $db->lastInsertId();
     $_SESSION['pseudo'] = $com_pseudo;
     $_SESSION['email'] = $com_email;
-
-    header('Location: ../../index.php');
-    exit();
+   
+    header('Location: home');
+    exit;
 }catch (PDOException $e) {
         die("Erreur de connexion : " . $e->getMessage());
 }
