@@ -18,7 +18,7 @@ try{
     }
 
 
-    $stmt = $db->prepare("INSERT INTO DUN_COMPTE (COM_ID,COM_PSEUDO, COM_EMAIL, COM_MDP) VALUES ((select count(*) from DUN_COMPTE),:pseudo, :email, :password)");
+    $stmt = $db->prepare("INSERT INTO DUN_COMPTE (COM_PSEUDO, COM_EMAIL, COM_MDP) VALUES (:pseudo, :email, :password)");
     $stmt->execute([
         ':pseudo' => $com_pseudo,
         ':email' => $com_email,
