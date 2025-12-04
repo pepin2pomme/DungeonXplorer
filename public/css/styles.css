@@ -85,7 +85,7 @@ header {
 }
 
 
-/*==================== body ====================*/
+/*==================== BODY ====================*/
 
 
 body {
@@ -137,4 +137,19 @@ body::after {
 }
 
 
-/*==================== BODY ====================*/
+/*==================== FOOTER ====================*/
+
+footer{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgb(20, 20, 20);
+    padding: 10px 20px;
+    box-sizing: border-box;
+    z-index: 1000;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}

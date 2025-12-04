@@ -29,13 +29,13 @@
                     <img src="public/img/icons/info.png" alt="Logo" style="height:34px; width:auto;">
                     <p>A propos</p>
                 </a>
-                <?php if(!isset($_SESSION['is_logged_in'])): ?>
+                <?php if(!isset($_SESSION['user_id'])): ?>
                     <a class="button flex-row" href="login">
                         <img src="public/img/icons/account.png" alt="Logo" style="height:34px; width:auto;">
                         <p>Se connecter</p>
                     </a>
                 <?php else: ?>
-                    <a class="button flex-row" href="profil">
+                    <a class="button flex-row" href="profile">
                         <img src="public/img/icons/account.png" alt="Logo" style="height:34px; width:auto;">
                         <?= htmlspecialchars($_SESSION['pseudo']); ?>
                     </a>

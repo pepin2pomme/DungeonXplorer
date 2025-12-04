@@ -5,12 +5,20 @@ session_start();
 $url = isset($_GET['url']) ? $_GET['url'] : 'home';
 $url = rtrim($url, '/');
 $url = explode('/', $url);
+echo("<br>Url:</b><br>");
 var_dump($url);
+echo("<br><br>");
 
 define('ROOT_DIR', __DIR__ . DIRECTORY_SEPARATOR);
 
 require __DIR__ . '/app/core/config.php';
+echo("<br>Connexion:</b><br>");
 var_dump($db);
+echo("<br><br>");
+
+echo("<br>Session Data:</b><br>");
+var_dump($_SESSION);
+echo("<br><br>");
 
 switch (true) {
     //---------------PAGES PRINCIPALES--------------------//
