@@ -11,7 +11,7 @@
             <div class="flex-row">         
                 <a id="logoImg" href="home">
                     <picture>
-                        <source media="(max-width: 768px)" srcset="/public/img/logo/dungeonLogoMinLight.png">
+                        <source media="(max-width: 768px)" srcset="public/img/logo/dungeonLogoMinLight.png">
                         <img src="public/img/logo/dungeonLogoFullLight.png" alt="Logo" style="height:34px; width:auto;">
                     </picture>            
                 </a>
